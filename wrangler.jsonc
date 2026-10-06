@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "faculty-equipment-booking",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-05",
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "faculty-booking-db",
+      "database_id": "23f181b2-57b2-4cd2-b8d1-1f605a7b5f3d"
+    }
+  ]
+}

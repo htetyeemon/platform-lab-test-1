@@ -1,0 +1,27 @@
+{
+  "name": "faculty-booking-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:create": "wrangler d1 create faculty-booking-db",
+    "db:migrate": "wrangler d1 migrations apply faculty-booking-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply faculty-booking-db --remote",
+    "db:seed": "wrangler d1 execute faculty-booking-db --local --file=./seed.sql",
+    "db:seed:remote": "wrangler d1 execute faculty-booking-db --remote --file=./seed.sql",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261005.1",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.147.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261001.1": true,
+    "esbuild@0.28.1": true
+  }
+}
